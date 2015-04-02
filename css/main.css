@@ -84,6 +84,27 @@ body {
   margin-top: 0;
 }
 
+.main .container .transbox
+    {
+     width: 90%;
+     height: 100%;
+     margin: 20px;
+     background-color: rgba(0, 0, 0, 0.760784);
+     border: 1px solid black;
+     opacity:0.4;
+     border-radius: 10px;
+     overflow: hidden;
+     filter:alpha(opacity=60); /* For IE8 and earlier */  
+    }
+.main .container .transbox p
+    {
+      font-weight: bold;
+      margin : 10px;
+      color: #ffffff;
+      line-height: 160%;
+      text-align: left;
+    }
+
 
 /*
  * Placeholder dashboard ideas
@@ -141,4 +162,34 @@ body {
 .social img {
 	height: 32px;
 	width: 32px;
+}
+
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+  }
+
+.clearfix:after {
+        clear: both;
+    }
+
+
+#containingBlock {
+  width:50%;
+}
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  height: 0;
+}
+.videoWrapper object,
+.videoWrapper embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
