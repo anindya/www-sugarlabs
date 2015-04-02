@@ -99,7 +99,7 @@ body {
 .main .container .transbox p
     {
       font-weight: bold;
-      margin : 10px;
+      margin : 20px 20px;
       color: #ffffff;
       line-height: 160%;
       text-align: left;
@@ -165,31 +165,3 @@ body {
 }
 
 
-.clearfix:before,
-.clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
-  }
-
-.clearfix:after {
-        clear: both;
-    }
-
-
-#containingBlock {
-  width:50%;
-}
-.videoWrapper {
-  position: relative;
-  padding-bottom: 56.25%;
-  padding-top: 25px;
-  height: 0;
-}
-.videoWrapper object,
-.videoWrapper embed {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}

@@ -12,10 +12,13 @@
 		<link rel="stylesheet" href="//blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
 		<link rel="stylesheet" href="css/bootstrap-image-gallery.min.css">
 		<link rel="stylesheet" href="css/main.css" />
+		<link type="text/css" rel="stylesheet" href="css/styles.css" />
 		<link id="defaultIcon" rel="shortcut icon" href="assets/favicon_06.png" />
 		<link href='css/onepage-scroll.css' rel='stylesheet' type='text/css'>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="jquery.onepage-scroll.js"></script>
+		<!-- horizontal slider scripts -->
+		<script type="text/javascript" src="js/responsiveCarousel.min.js"></script>
 		
 
 		<title>{{ page.title }}</title>
@@ -220,14 +223,16 @@
 				</div>
 			</section>
 			<!-- welcome page ends -->
-			
+
 			<section>
-				<div class="col-md-12 standardbox" style="background-color: #78e600; margin: 0 auto;">
-					<a name="about"></a>
-					<h1 class="wow shake" data-wow-delay="1.5s">About</h1>
-					{% include about.html %}
+				<div class="row" style="background-color: #78e600; padding-top:60px; height:100%">
+						<div class="col-md-8 col-md-offset-2">
+							<a name="about"></a>
+							<h2 style="text-align:center">About Sugarlabs</h2>
+							{% include about.html %}
+						</div>
 				</div>
-			</secion>
+			</section>
 			<section>
 				<div class="col-md-12 standardbox" style="background-color: #00beff; text-align: left; margin: 0 auto;">
 					<a name="activities"></a>
@@ -305,38 +310,51 @@
 				</div>
 			</section>
 		</div>
-		<script src="wow.min.js"></script>
 		<script>
 		
-						$(document).ready(function() {
-				function scrollToAnchor(aid){
+			$(document).ready(function() {
+					function scrollToAnchor(aid){
 					var aTag = $("a[name='"+ aid +"']");
 					$('html,body').animate({scrollTop: aTag.offset().top},'slow');
 				}
 				$("a").click(function() {
 					var href = $(this).attr('href').replace('#', '')
 					scrollToAnchor(href);
-				});			
-			});
-			
-			var logoNo = Math.floor((Math.random() * 12) + 1);
-			if(logoNo < 10) logoNo = "0"+logoNo; //generate random logo number
-			
-			$("#defaultIcon").remove(); //remove old one favicon
-			
-			(function() {
-				var link = document.createElement('link');
-				link.type = 'image/x-icon';
-				link.rel = 'shortcut icon';
-				link.href = 'assets/favicon_' + logoNo + '.png';
-				document.getElementsByTagName('head')[0].appendChild(link);
-			}()); //change favicon
-					
-			document.getElementById('logoMain').src = "assets/logo_black_" + logoNo + ".png"; //change topbar logo
-			new WOW().init();
+					});			
+				});
+
+				var logoNo = Math.floor((Math.random() * 12) + 1);
+				if(logoNo < 10) logoNo = "0"+logoNo; //generate random logo number
+
+				$("#defaultIcon").remove(); //remove old one favicon
+
+				(function() {
+					var link = document.createElement('link');
+					link.type = 'image/x-icon';
+					link.rel = 'shortcut icon';
+					link.href = 'assets/favicon_' + logoNo + '.png';
+					document.getElementsByTagName('head')[0].appendChild(link);
+				}()); //change favicon
+
+				document.getElementById('logoMain').src = "assets/logo_black_" + logoNo + ".png"; //change topbar logo
+				new WOW().init();
 		</script>
 		<script src="//blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
 		<script src="bootstrap-image-gallery.min.js"></script>
+		<!-- Script for horizontal scroll -->
+		<script type="text/javascript">
+			$(function(){
+			  $('.crsl-items').carousel({
+			    visible: 1,
+			    itemMinWidth: 180,
+			    itemEqualHeight: false,
+			    itemMargin: 9,
+			});  
+			$("a[href=#]").on('click', function(e) {
+			    e.preventDefault();
+			});
+		});
+</script>		
 	</body>
 </html>
 	
