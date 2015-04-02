@@ -101,7 +101,7 @@
 				height: 100%;;
 			}
 
-			#page1{
+			#page{
 				position: relative;
 				top: 50%;
 				transform: translateY(-50%);
@@ -180,7 +180,7 @@
 		<div class="main" >	
 			<!-- welcome page starts -->
 			<section>
-				<div class="container" id="page1">			
+				<div class="container" id="page">			
 					<h2 style="text-align: center; margin-top:60px">Welcome to Sugar Labs!</h2>
 					<div class="row" >
 						<div class="col-md-8 col-md-offset-2">
@@ -225,10 +225,10 @@
 			<!-- welcome page ends -->
 
 			<section>
-				<div class="row" style="background-color: #78e600; padding-top:60px; height:100%">
-						<div class="col-md-8 col-md-offset-2">
+				<div class="row" style="background-color: #78e600; padding-top:60px; height:100%" >
+						<div class="col-md-8 col-md-offset-2" id="page">
 							<a name="about"></a>
-							<h2 style="text-align:center">About Sugarlabs</h2>
+							<h2 style="text-align:center">About Sugarlabs</h2><br>
 							{% include about.html %}
 						</div>
 				</div>
