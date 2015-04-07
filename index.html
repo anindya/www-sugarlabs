@@ -19,7 +19,7 @@
 		<script type="text/javascript" src="jquery.onepage-scroll.js"></script>
 		<!-- horizontal slider scripts -->
 		<script type="text/javascript" src="js/responsiveCarousel.min.js"></script>
-		
+		<script type="text/javascript" src="js/masonry.pkgd.min.js"></script>
 
 		<title>{{ page.title }}</title>
 		<style>
@@ -241,6 +241,13 @@
 				</div>
 			</section>
 			<section>
+				<div class="col-md-12 standardbox" style="background-color: #00beff; text-align: left; margin: 0 auto;">
+					<a name="activities2"></a>
+					<h1 class="wow shake" data-wow-delay="0.5s">Activities</h1>
+					{% include about_activities3.html %}
+				</div>
+			</section>
+			<section>
 				<div class="col-md-12 standardbox" style="background-color: #ff7800; margin: 0 auto;">
 					<a name="features"></a>
 					<h1 class="wow shake" data-wow-delay="0.5s">Features</h1>
@@ -349,12 +356,20 @@
 			    itemMinWidth: 180,
 			    itemEqualHeight: false,
 			    itemMargin: 9,
-			});  
-			$("a[href=#]").on('click', function(e) {
-			    e.preventDefault();
+				});  
+				$("a[href=#]").on('click', function(e) {
+				    e.preventDefault();
+				});
 			});
-		});
-</script>		
+		</script>
+		<script type="text/javascript">
+			var container = document.querySelector('#container');
+			var msnry = new Masonry( container, {
+			  // options...
+			  itemSelector: '.item',
+			  columnWidth: 100
+			});
+		</script>		
 	</body>
 </html>
 	
