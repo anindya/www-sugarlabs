@@ -164,4 +164,17 @@ body {
 	width: 32px;
 }
 
+/* For activity page */
+.item span{
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.25em;
+  word-wrap: break-word;
+}
 
+.item img{
+  text-align: center;
+}
+.item ul{
+  list-style-type: none;
+}
