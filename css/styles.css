@@ -19,6 +19,16 @@
 	padding: 20px;
 }
 
+.crsl-item1 {
+	height:auto;
+	color:white ;
+	background: #fff;
+	padding: 8px;
+	background-color: rgba(0, 0, 0, 0.760784);
+	border: 1px solid black;
+	border-radius: 10px;
+	overflow: hidden;
+}
 /** posts slider nav **/
 .slidernav {
 	display: block;

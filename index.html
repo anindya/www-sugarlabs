@@ -242,10 +242,13 @@
 				</div>
 			</section>
 			<section>
-				<div class="col-md-12 standardbox" style="background-color: #00beff; text-align: left; margin: 0 auto;">
-					<a name="activities2"></a>
-					<h1 class="wow shake" data-wow-delay="0.5s">Activities</h1>
-					{% include about_activities2.html %}
+				<div class="row" style="background-color: #78e600; padding-top:60px; height:100%" >
+						<div class="col-md-8 col-md-offset-2" id="page">
+							<a name="activities2"></a>
+							<h1 class="wow shake" data-wow-delay="0.5s">Activities</h1>
+							{% include about_activities2.html %}
+						</div>
+					</div>
 				</div>
 			</section>
 			<section>
@@ -357,6 +360,19 @@
 			    itemMinWidth: 180,
 			    itemEqualHeight: false,
 			    itemMargin: 9,
+				});  
+				$("a[href=#]").on('click', function(e) {
+				    e.preventDefault();
+				});
+			});
+		</script>
+		<script type="text/javascript">
+			$(function(){
+			  $('.crsl-items1').carousel({
+			    visible: 1,
+			    itemMinWidth: 80%,
+			    itemEqualHeight: false,
+			    itemMargin: 1,
 				});  
 				$("a[href=#]").on('click', function(e) {
 				    e.preventDefault();
