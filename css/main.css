@@ -168,11 +168,17 @@ body {
 .item{
   background-color: blue;
   position: relative;
+  min-width:80px;
+  max-height: 110px;
+  margin-top: 5px;
+  margin-right: 7px;
+  padding: 10px;
 }
-.item .title{
-  position: relative;
-  text-align: center;
-  font-weight: bold;
+
+.item ul li .title{
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
   font-size: 1.25em;
 }
 
@@ -182,11 +188,10 @@ body {
     top: 50%;
     left: 50%;
     margin-right: -50%;
-    transform: translate(-50%, -50%)
-
+    transform: translate(-50%, -50%);
 }
+
 .item ul{
   list-style-type: none;
-    display: list-item;
+  display: list-item;
 }
-
