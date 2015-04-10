@@ -66,6 +66,8 @@ h1 {
 
 .crsl-item {
   background: #fff;
+  min-height: 400px;
+  max-height: 500px;
   padding: 8px;
   background-color: rgba(0, 0, 0, 0.760784);
   border: 1px solid black;

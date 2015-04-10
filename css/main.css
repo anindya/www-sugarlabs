@@ -165,16 +165,28 @@ body {
 }
 
 /* For activity page */
-.item span{
+.item{
+  background-color: blue;
+  position: relative;
+}
+.item .title{
+  position: relative;
   text-align: center;
   font-weight: bold;
   font-size: 1.25em;
-  word-wrap: break-word;
 }
 
-.item img{
-  text-align: center;
+.item .display_image{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+
 }
 .item ul{
   list-style-type: none;
+    display: list-item;
 }
+
